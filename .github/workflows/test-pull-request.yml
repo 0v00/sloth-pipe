@@ -13,8 +13,6 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v3
-              with:
-                fetch-depth: 1
 
             - name: grab main
               run: git fetch --no-tags --prune --depth=1 origin main:refs/remotes/origin/main
