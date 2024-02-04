@@ -19,6 +19,12 @@ jobs:
               run: bun install
             - name: Fetch main
               run: git fetch --no-tags --prune --depth=1 origin main:refs/remotes/origin/main
+            - name: List branches and current branch
+              run: |
+                git branch -a
+                echo "Current branch:"
+                git rev-parse --abbrev-ref HEAD
+            
             - name: Run tests
               working-directory: ./src
               run: bun test
