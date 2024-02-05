@@ -17,8 +17,8 @@ jobs:
               uses: oven-sh/setup-bun@v1
             - name: Install dependencies
               run: bun install
-            # - name: Fetch main
-            #   run: git fetch --no-tags --prune --depth=1 origin main:refs/remotes/origin/main
+            - name: Fetch main
+              run: git fetch --no-tags --prune --depth=1 origin main:refs/remotes/origin/main
             - name: Run tests
               working-directory: ./src
               run: bun test
